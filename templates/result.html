@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Result</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Upload Result</h1>
+    <p><strong>Filename:</strong> {{ filename }}</p>
+    <h2>Extracted Details</h2>
+    <ul>
+        <li><strong>Name:</strong> {{ details.name }}</li>
+        <li><strong>Email:</strong> {{ details.email }}</li>
+        <li><strong>Phone Number:</strong> {{ details.phone_number }}</li>
+        <li><strong>Gender:</strong> {{ details.gender }}</li>
+        <li><strong>Education:</strong> {{ details.education }}</li>
+        <li><strong>About:</strong> {{ details.about }}</li>
+        <li><strong>Skills:</strong> {{ details.skills }}</li>
+        <li><strong>Experience:</strong> {{ details.experience }}</li>
+        <li><strong>Language:</strong> {{ details.languages }}</li>
+    </ul>
+    <a href="/view">View all CVs</a>
+    
+    <a href="/">Upload another file</a>
+</body>
+</html>

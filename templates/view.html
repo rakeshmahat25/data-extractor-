@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Uploaded CVs</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Uploaded CVs</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Gender</th>
+                <th>Education</th>
+                <th>About</th>
+                <th>Skills</th>
+                <th>Experience</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in cv_entries %}
+            <tr>
+                <td>{{ entry.id }}</td>
+                <td>{{ entry.name }}</td>
+                <td>{{ entry.email }}</td>
+                <td>{{ entry.phone_number }}</td>
+                <td>{{ entry.gender }}</td>
+                <td>{{ entry.education }}</td>
+                <td>{{ entry.about }}</td>
+                <td>{{ entry.skills }}</td>
+                <td>{{ entry.experience }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Upload another file</a>
+</body>
+</html>
